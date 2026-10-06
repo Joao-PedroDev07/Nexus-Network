@@ -1,1 +1,1 @@
-# Nexus-Network
+Este é o nosso projeto do TCC sobre a criação de um site que estabelece uma conexão entre prestadores de serviços e clientes. O site consta com busca de profissionais por localização, login com Google Auth, Chat em tempo real e muito mais.
