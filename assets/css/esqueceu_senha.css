@@ -1,0 +1,536 @@
+/* Reset e Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.account-page {
+    background: #000000;
+}
+
+/* Header */
+.header {
+    background: #000000;
+    border-bottom: 2px solid #20cd8d;
+    box-shadow: 0 2px 10px rgba(32, 205, 141, 0.2);
+}
+
+.header-nav {
+    padding: 1rem 0;
+}
+
+.navbar-brand.logo img {
+    max-height: 50px;
+    filter: brightness(0) invert(1);
+}
+
+/* Mobile Menu Button */
+#mobile_btn {
+    background: none;
+    border: none;
+    padding: 10px;
+}
+
+.bar-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #20cd8d;
+    margin: 5px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+/* Header Contact */
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.header-contact-img {
+    margin-right: 15px;
+}
+
+.header-contact-img svg {
+    background: rgba(32, 205, 141, 0.1);
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.contact-header {
+    color: #20cd8d;
+    font-size: 0.9rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.contact-info-header {
+    color: #ffffff;
+    font-size: 1rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Header Login Link */
+.header-login {
+    background: linear-gradient(45deg, #20cd8d, #17a673);
+    color: #000000 !important;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.header-login:hover {
+    background: transparent;
+    color: #20cd8d !important;
+    border-color: #20cd8d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(32, 205, 141, 0.3);
+}
+
+/* Main Content */
+.content {
+    padding: 3rem 0;
+    min-height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+}
+
+.container-fluid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Account Content */
+.account-content {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 3rem;
+    border: 1px solid rgba(32, 205, 141, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Login Right Section */
+.login-right {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    padding: 2.5rem;
+    border: 1px solid #20cd8d;
+}
+
+.login-header h3 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.login-header h3 span {
+    color: #20cd8d;
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-focus {
+    position: relative;
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(32, 205, 141, 0.3);
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 15px 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 100%;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #20cd8d;
+    box-shadow: 0 0 20px rgba(32, 205, 141, 0.3);
+    outline: none;
+    color: #ffffff;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Floating Labels */
+.focus-label {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    background: transparent;
+    padding: 0 5px;
+}
+
+.form-control:focus + .focus-label,
+.form-control:not(:placeholder-shown) + .focus-label {
+    top: -10px;
+    left: 15px;
+    font-size: 0.8rem;
+    color: #20cd8d;
+    background: #000000;
+}
+
+/* Select Field - CORREÇÃO DEFINITIVA COM FORÇA MÁXIMA */
+select#tipo_usuario.form-control.select-custom {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 15px center !important;
+    background-size: 20px !important;
+    border: 2px solid rgba(32, 205, 141, 0.3) !important;
+    border-radius: 10px !important;
+    color: #ffffff !important;
+    padding: 15px 45px 15px 20px !important;
+    font-size: 1rem !important;
+    transition: all 0.3s ease !important;
+    width: 100% !important;
+    cursor: pointer !important;
+    line-height: 1.5 !important;
+    height: auto !important;
+    font-family: 'Arial', sans-serif !important;
+}
+
+select#tipo_usuario.form-control.select-custom:focus {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border-color: #20cd8d !important;
+    box-shadow: 0 0 20px rgba(32, 205, 141, 0.3) !important;
+    outline: none !important;
+    color: #ffffff !important;
+}
+
+select#tipo_usuario.form-control.select-custom option {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    padding: 15px !important;
+    font-size: 1rem !important;
+}
+
+select#tipo_usuario.form-control.select-custom option[value=""] {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+select#tipo_usuario.form-control.select-custom:hover {
+    border-color: rgba(32, 205, 141, 0.6) !important;
+}
+
+/* Sobrescrever qualquer estilo do Bootstrap */
+.form-group select#tipo_usuario {
+    color: #ffffff !important;
+}
+
+.account-page select#tipo_usuario {
+    color: #ffffff !important;
+}
+
+body select#tipo_usuario {
+    color: #ffffff !important;
+}
+
+/* Label para Select */
+label[for="tipo_usuario"] {
+    color: #20cd8d;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Forgot Password Link */
+.forgot-link {
+    color: #20cd8d;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.forgot-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Login Button */
+.login-btn {
+    background: linear-gradient(45deg, #20cd8d, #17a673);
+    border: none;
+    border-radius: 10px;
+    color: #000000;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 15px;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+.login-btn:hover {
+    background: linear-gradient(45deg, #17a673, #20cd8d);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(32, 205, 141, 0.4);
+}
+
+/* Social Login Buttons */
+.btn-facebook {
+    background: #4267B2 !important;
+    border-color: #4267B2 !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+.btn-facebook:hover {
+    background: #365899 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(66, 103, 178, 0.4);
+}
+
+.btn-google {
+    background: #db4437 !important;
+    border-color: #db4437 !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+.btn-google:hover {
+    background: #c23321 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(219, 68, 55, 0.4);
+}
+
+/* Login Divider */
+.login-or {
+    position: relative;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.or-line {
+    display: block;
+    height: 1px;
+    background: rgba(32, 205, 141, 0.3);
+    width: 100%;
+}
+
+.span-or {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000000;
+    color: #20cd8d;
+    padding: 0 15px;
+    font-weight: 600;
+}
+
+.span-or::before {
+    content: "OU";
+}
+
+/* Don't Have Account */
+.dont-have {
+    margin-top: 2rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+}
+
+.dont-have a {
+    color: #20cd8d;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.dont-have a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Forgot Password Specific Styles */
+.login-header p.small {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    font-style: italic;
+}
+
+.text-muted {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Forgot Password Page Header */
+.login-header h3 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Específico para página de esqueceu senha */
+.account-page .login-header h3:not(:has(span)) {
+    color: #20cd8d;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Botão de envio para forgot password */
+.login-btn[type="submit"] {
+    background: linear-gradient(45deg, #20cd8d, #17a673);
+    border: none;
+    border-radius: 10px;
+    color: #000000;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 15px;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+.login-btn[type="submit"]:hover {
+    background: linear-gradient(45deg, #17a673, #20cd8d);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(32, 205, 141, 0.4);
+}
+
+/* Ajustes específicos para tela de esqueceu senha */
+.forgot-password-page .login-right {
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid #20cd8d;
+}
+
+.forgot-password-page .account-content {
+    background: rgba(32, 205, 141, 0.05);
+    backdrop-filter: blur(15px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 0 1rem;
+    }
+    
+    .account-content {
+        padding: 2rem 1rem;
+        margin: 1rem;
+    }
+    
+    .login-right {
+        padding: 2rem 1.5rem;
+    }
+    
+    .login-header h3 {
+        font-size: 1.8rem;
+    }
+    
+    .contact-item {
+        display: none;
+    }
+    
+    .header-contact-detail {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .login-header h3 {
+        font-size: 1.5rem;
+    }
+    
+    .login-header h3 span {
+        font-size: 1rem;
+    }
+    
+    .form-control {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    .focus-label {
+        font-size: 0.9rem;
+    }
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.account-content {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Efeitos de hover para inputs */
+.form-control:hover {
+    border-color: rgba(32, 205, 141, 0.6);
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #20cd8d;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #17a673;
+}

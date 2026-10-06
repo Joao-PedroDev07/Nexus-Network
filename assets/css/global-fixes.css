@@ -1,0 +1,131 @@
+/* ===== CORREÇÃO DE SUBTÍTULOS - TODAS AS PÁGINAS ===== */
+
+/* ===== FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #000000;
+    color: #ffffff;
+    line-height: 1.6;
+}   
+/* Hero Sections - Centralização do subtítulo */
+.hero-suporte .hero-subtitle,
+.hero-contato .hero-subtitle,
+.hero-sobre .hero-subtitle,
+.hero-blog .hero-subtitle {
+    font-size: 19px;
+    color: #999999;
+    font-weight: 400;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+    line-height: 1.6;
+}
+
+/* Section Subtitles */
+.section-subtitle {
+    font-size: 19px;
+    color: #999999;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 auto 60px;
+    max-width: 700px;
+    padding: 0 20px;
+    line-height: 1.6;
+}
+
+/* Sobre - Hero específico */
+.hero-sobre .hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-sobre .hero-subtitle {
+    font-size: 19px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contato - Subtítulo específico */
+.contact-section .section-subtitle {
+    margin-bottom: 30px;
+}
+
+/* Blog - Hero específico */
+.hero-blog .hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Featured Post */
+.featured-excerpt {
+    font-size: 18px;
+    color: #999999;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* Newsletter */
+.newsletter-content p {
+    font-size: 18px;
+    color: #ffffff;
+    opacity: 0.95;
+    margin: 0 auto 40px;
+    max-width: 600px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* CTA Sections */
+.cta-sobre p {
+    font-size: 20px;
+    color: #ffffff;
+    opacity: 0.95;
+    margin: 0 auto 40px;
+    max-width: 700px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-suporte .hero-subtitle,
+    .hero-contato .hero-subtitle,
+    .hero-sobre .hero-subtitle,
+    .hero-blog .hero-subtitle,
+    .section-subtitle {
+        font-size: 18px;
+        padding: 0 15px;
+        max-width: 90%;
+    }
+    
+    .hero-sobre .hero-subtitle {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-suporte .hero-subtitle,
+    .hero-contato .hero-subtitle,
+    .hero-sobre .hero-subtitle,
+    .hero-blog .hero-subtitle,
+    .section-subtitle {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+    
+    .featured-excerpt {
+        font-size: 16px;
+    }
+    
+    .newsletter-content p,
+    .cta-sobre p {
+        font-size: 16px;
+    }
+}

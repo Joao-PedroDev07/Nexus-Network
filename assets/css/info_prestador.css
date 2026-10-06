@@ -1,0 +1,848 @@
+/* ============================================
+   ESTILOS GLOBAIS
+   ============================================ */
+
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.main-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ============================================
+   BREADCRUMB
+   ============================================ */
+
+.breadcrumb-bar {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+    padding: 2rem 0;
+    border-bottom: 2px solid #20cd8d;
+    margin-bottom: 2rem;
+}
+
+.breadcrumb {
+    background: none;
+    padding: 0;
+    margin-bottom: 0.5rem;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.breadcrumb-item {
+    color: #cccccc;
+    font-size: 0.9rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "›";
+    padding-right: 0.5rem;
+    color: #20cd8d;
+}
+
+.breadcrumb-item a {
+    color: #20cd8d;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-item a:hover {
+    color: #1bb380;
+}
+
+.breadcrumb-item.active {
+    color: #888888;
+}
+
+.breadcrumb-title {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* ============================================
+   CONTENT AREA
+   ============================================ */
+
+.content {
+    flex: 1;
+    padding: 2rem 0;
+}
+
+/* ============================================
+   CARD DO PRESTADOR
+   ============================================ */
+
+.card {
+    background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+    border: 1px solid #333333;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+    border-color: #20cd8d;
+    box-shadow: 0 10px 40px rgba(32, 205, 141, 0.2);
+    transform: translateY(-5px);
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+/* Doctor Widget */
+.doctor-widget {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.doc-info-left {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.doctor-img {
+    flex-shrink: 0;
+}
+
+.doctor-img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 3px solid #20cd8d;
+    box-shadow: 0 5px 15px rgba(32, 205, 141, 0.3);
+}
+
+.doc-info-cont {
+    flex: 1;
+}
+
+.doc-name {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+}
+
+.doc-speciality {
+    color: #20cd8d;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.doc-location {
+    color: #cccccc;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.doc-location i {
+    color: #20cd8d;
+}
+
+.clinic-services {
+    margin: 1rem 0;
+}
+
+.clinic-services span {
+    background: linear-gradient(135deg, #20cd8d, #1bb380);
+    color: #000000;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.btn {
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.btn-white {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 1px solid #444444;
+}
+
+.btn-white:hover {
+    background: linear-gradient(135deg, #20cd8d, #1bb380);
+    color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(32, 205, 141, 0.3);
+}
+
+/* Rating Display */
+.rating-display {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(32, 205, 141, 0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(32, 205, 141, 0.3);
+}
+
+.stars-average {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.stars-average i {
+    color: #20cd8d;
+    font-size: 1.2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.stars-average .far,
+.stars-average .fa-star-half-alt {
+    color: #444444;
+}
+
+.rating-text {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* Descrição */
+.descricao {
+    width: 100%;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    border-left: 4px solid #20cd8d;
+}
+
+.descricao::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(32, 205, 141, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.descricao p {
+    margin: 0;
+    line-height: 1.8;
+    color: #cccccc;
+    font-size: 1rem;
+    text-align: justify;
+    position: relative;
+    z-index: 1;
+}
+
+.descricao p::first-letter {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #20cd8d;
+}
+
+/* ============================================
+   SEÇÃO DE COMENTÁRIOS E AVALIAÇÕES
+   ============================================ */
+
+.comments-section {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-top: 3rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    border: 1px solid #20cd8d;
+    position: relative;
+    overflow: hidden;
+}
+
+.comments-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #20cd8d, #1bb380, #20cd8d);
+    background-size: 200% 100%;
+    animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.comments-section > h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #20cd8d;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.comments-section > h2 i {
+    color: #20cd8d;
+    font-size: 1.8rem;
+}
+
+/* Alertas */
+.alert {
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.alert-success {
+    background: rgba(32, 205, 141, 0.15);
+    border: 1px solid #20cd8d;
+    color: #20cd8d;
+}
+
+.alert-error {
+    background: rgba(255, 68, 68, 0.15);
+    border: 1px solid #ff4444;
+    color: #ff4444;
+}
+
+/* ============================================
+   FORMULÁRIO DE AVALIAÇÃO
+   ============================================ */
+
+.add-comment-box {
+    background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    border: 1px solid #333333;
+    transition: all 0.3s ease;
+}
+
+.add-comment-box:hover {
+    border-color: #20cd8d;
+    box-shadow: 0 5px 20px rgba(32, 205, 141, 0.15);
+}
+
+.add-comment-box h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+/* Sistema de Estrelas */
+.rating-input {
+    margin-bottom: 1.5rem;
+}
+
+.rating-input > label {
+    display: block;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.stars-input {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+.stars-input input[type="radio"] {
+    display: none;
+}
+
+.stars-input label {
+    cursor: pointer;
+    font-size: 2rem;
+    color: #444444;
+    transition: all 0.2s ease;
+    margin: 0;
+}
+
+.stars-input label:hover,
+.stars-input label:hover ~ label {
+    color: #20cd8d;
+    transform: scale(1.1);
+}
+
+.stars-input input[type="radio"]:checked ~ label {
+    color: #20cd8d;
+}
+
+/* Form Controls */
+.form-label {
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.comment-textarea {
+    width: 100%;
+    min-height: 120px;
+    background: #1a1a1a;
+    border: 2px solid #333333;
+    border-radius: 12px;
+    padding: 1rem;
+    color: #ffffff;
+    font-size: 1rem;
+    resize: vertical;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.comment-textarea:focus {
+    outline: none;
+    border-color: #20cd8d;
+    background: #0d0d0d;
+    box-shadow: 0 0 0 3px rgba(32, 205, 141, 0.1);
+}
+
+.comment-textarea::placeholder {
+    color: #666666;
+}
+
+.text-muted {
+    color: #888888;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+.btn-submit-comment {
+    background: linear-gradient(135deg, #20cd8d, #1bb380);
+    color: #000000;
+    border: none;
+    padding: 0.9rem 2.5rem;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-submit-comment:hover {
+    background: linear-gradient(135deg, #1bb380, #17a170);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(32, 205, 141, 0.4);
+}
+
+/* ============================================
+   LOGIN REQUIRED
+   ============================================ */
+
+.login-required {
+    background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+    border: 2px dashed #20cd8d;
+    border-radius: 15px;
+    padding: 2.5rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.login-required i {
+    font-size: 3rem;
+    color: #20cd8d;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.login-required p {
+    color: #cccccc;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.login-required strong {
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #20cd8d, #1bb380);
+    color: #000000;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #1bb380, #17a170);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(32, 205, 141, 0.4);
+}
+
+/* ============================================
+   LISTA DE COMENTÁRIOS
+   ============================================ */
+
+.comments-list {
+    margin-top: 2rem;
+}
+
+.comment-item {
+    background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+    border: 1px solid #333333;
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.comment-item:hover {
+    border-color: #20cd8d;
+    box-shadow: 0 5px 20px rgba(32, 205, 141, 0.1);
+    transform: translateX(5px);
+}
+
+.comment-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, #20cd8d, #1bb380);
+    border-radius: 15px 0 0 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.comment-item:hover::before {
+    opacity: 1;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.user-info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #20cd8d;
+    object-fit: cover;
+}
+
+.user-info strong {
+    color: #ffffff;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.comment-rating {
+    display: flex;
+    gap: 0.2rem;
+    margin: 0.25rem 0;
+}
+
+.comment-rating i {
+    color: #20cd8d;
+    font-size: 0.9rem;
+}
+
+.comment-rating .far {
+    color: #444444;
+}
+
+.comment-date {
+    color: #888888;
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 0.25rem;
+}
+
+.btn-delete-comment {
+    background: rgba(255, 68, 68, 0.1);
+    color: #ff4444;
+    border: 1px solid #ff4444;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-delete-comment:hover {
+    background: #ff4444;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 68, 68, 0.3);
+}
+
+.comment-text {
+    color: #cccccc;
+    line-height: 1.7;
+    font-size: 1rem;
+    margin: 0;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+/* ============================================
+   SEM COMENTÁRIOS
+   ============================================ */
+
+.no-comments {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+    border-radius: 15px;
+    border: 2px dashed #333333;
+}
+
+.no-comments i {
+    font-size: 4rem;
+    color: #20cd8d;
+    opacity: 0.5;
+    margin-bottom: 1rem;
+}
+
+.no-comments p {
+    color: #888888;
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+.no-comments p:last-child {
+    color: #20cd8d;
+    font-weight: 600;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+    background: #000000;
+    border-top: 2px solid #20cd8d;
+    margin-top: auto;
+}
+
+.footer-bottom {
+    padding: 1.5rem 0;
+}
+
+.copyright-text {
+    color: #cccccc;
+    margin: 0;
+}
+
+.copyright-text p {
+    margin: 0;
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+
+@media (max-width: 992px) {
+    .doc-info-left {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .doctor-img img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .breadcrumb-title {
+        font-size: 1.5rem;
+    }
+
+    .comments-section {
+        padding: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .comments-section > h2 {
+        font-size: 1.5rem;
+    }
+
+    .add-comment-box {
+        padding: 1.5rem;
+    }
+
+    .stars-input label {
+        font-size: 1.5rem;
+    }
+
+    .comment-item {
+        padding: 1rem;
+    }
+
+    .comment-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .btn-delete-comment {
+        align-self: flex-start;
+    }
+
+    .rating-display {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .doc-name {
+        font-size: 1.5rem;
+    }
+
+    .doc-speciality {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .breadcrumb-bar {
+        padding: 1.5rem 0;
+    }
+
+    .card-body {
+        padding: 1.5rem;
+    }
+
+    .doctor-img img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .user-avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .btn-submit-comment {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .no-comments {
+        padding: 2rem 1rem;
+    }
+
+    .no-comments i {
+        font-size: 3rem;
+    }
+}
+
+/* ============================================
+   UTILITIES
+   ============================================ */
+
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+.mb-0 { margin-bottom: 0; }
+.mb-3 { margin-bottom: 1rem; }
+.g-4 { gap: 1.5rem; }
+
+.d-flex { display: flex; }
+.flex-fill { flex: 1; }
+.justify-content-center { justify-content: center; }
+.align-items-center { align-items: center; }
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}

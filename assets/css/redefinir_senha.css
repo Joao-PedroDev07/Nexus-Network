@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(32, 205, 141, 0.2);
+    padding: 50px 40px;
+    width: 100%;
+    max-width: 450px;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.icon {
+    width: 70px;
+    height: 70px;
+    background: #20cd8d;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 15px rgba(32, 205, 141, 0.3);
+}
+
+.icon::before {
+    content: "🔒";
+    font-size: 35px;
+}
+
+h1 {
+    color: #000000;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.back-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-link a {
+    color: #20cd8d;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.back-link a:hover {
+    color: #1ab87d;
+    text-decoration: underline;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    position: relative;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: #ffffff;
+    color: #000000;
+}
+
+input[type="password"]:focus {
+    outline: none;
+    border-color: #20cd8d;
+    box-shadow: 0 0 0 4px rgba(32, 205, 141, 0.1);
+}
+
+input[type="password"]::placeholder {
+    color: #999;
+}
+
+button[type="submit"] {
+    background: #20cd8d;
+    color: #ffffff;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+button[type="submit"]:hover {
+    background: #1ab878;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(32, 205, 141, 0.4);
+}
+
+button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+.requirements {
+    background: #f8f8f8;
+    border-left: 4px solid #20cd8d;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.requirements p {
+    color: #000000;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.requirements ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.requirements li {
+    color: #666;
+    font-size: 12px;
+    padding: 4px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.requirements li::before {
+    content: "✓";
+    color: #20cd8d;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 40px 25px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}

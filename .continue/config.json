@@ -1,0 +1,14 @@
+{
+  "models": [
+    {
+      "title": "DeepSeek Programação (Leve)",
+      "provider": "ollama",
+      "model": "deepseek-coder:1.3b"
+    },
+    {
+      "title": "DeepSeek Raciocínio (Leve)",
+      "provider": "ollama",
+      "model": "deepseek-r1:1.5b"
+    }
+  ]
+}
